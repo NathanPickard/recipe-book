@@ -18,7 +18,7 @@ function RecipeCtrl($scope, dataService) {
   };
 
   $scope.resetRecipeState = function () {
-    $scope.recipes.forEach(function (recipe) {
+    $scope.recipes.forEach(function(recipe) {
       recipe.edited = false;
     });
   }

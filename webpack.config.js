@@ -1,5 +1,5 @@
 var webpack = require('webpack'),
-var path = require('path');
+  path = require('path');
 
 module.exports = {
   context: __dirname + '/app',
@@ -8,7 +8,7 @@ module.exports = {
     vendor: ['angular']
   },
   output: {
-    path: __dirname + '/build',
+    path: __dirname + '/public/build',
     filename: 'recipe.bundle.js'
   },
   plugins: [
