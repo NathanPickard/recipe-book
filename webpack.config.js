@@ -10,7 +10,8 @@ module.exports = {
   output: {
     path: __dirname + '/build',
     filename: 'recipe.bundle.js'
-  }
-
-
-}
+  },
+  plugins: [
+    new webpack.optimize.CommonsChunkPlugin({name: 'vendor', filename: 'vendor.bundle.js'})
+  ]
+};
