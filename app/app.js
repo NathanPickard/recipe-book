@@ -1,12 +1,19 @@
 'use strict'
 
-import 'angular-material/angular-material.css';
+// import 'angular-material/angular-material.css';
 
-import angularMaterial from 'angular-material';
+// import ngMaterial from 'angular
+
+import './scripts/module/index';
+import './scripts/module/config';
+
 
 var angular = require('angular');
 
-angular.module("recipeBookApp", [angularMaterial]);
+
+// var ngMaterial = require('angular-material');
+
+angular.module("recipeBookApp", ['ngMaterial', 'module']);
 
 require('./scripts/services');
 require('./scripts/directives');

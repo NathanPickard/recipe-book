@@ -1,7 +1,10 @@
 <div class="item" ng-class="{'editing-item': editing, 'edited': recipe.edited}" ng-repeat="recipe in recipes">
   <label ng-hide="editing" ng-click="editing = true">{{recipe.name}}</label>
-  <input ng-show="editing" ng-blur="editing = false" class="editing-label" type="text" ng-model="recipe.name" ng-change="recipe.edited = true"
-  />
+  <md-input-container>
+    <label>Recipe:</label>
+    <input ng-show="editing" ng-blur="editing = false" class="editing-label" type="text" ng-model="recipe.name" ng-change="recipe.edited = true"
+    />
+  </md-input-container>
   <div class="actions">
     <a href="" ng-click="saveRecipes()">Save</a>
     <a href="" class="delete" ng-click="deleteRecipe(recipe, $index)">Delete</a>

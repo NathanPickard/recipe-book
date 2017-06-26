@@ -21,11 +21,14 @@
     "angular-animate": "^1.6.4",
     "angular-aria": "^1.6.4",
     "angular-material": "^1.1.4",
+    "angular-ui-router": "^1.0.3",
     "express": "^4.15.3"
   },
   "devDependencies": {
     "body-parser": "^1.17.2",
+    "css-loader": "^0.28.4",
     "mongoose": "^4.10.8",
+    "style-loader": "^0.18.2",
     "webpack": "^3.0.0"
   }
 }
