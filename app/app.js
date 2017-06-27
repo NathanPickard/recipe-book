@@ -7,6 +7,7 @@
 import './scripts/module/index';
 import './scripts/module/config';
 
+import uirouter from 'angular-ui-router';
 
 var angular = require('angular');
 

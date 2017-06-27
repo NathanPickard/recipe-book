@@ -1,7 +1,7 @@
-<div class="item" ng-class="{'editing-item': editing, 'edited': recipe.edited}" ng-repeat="recipe in recipes">
+<div layout="column" layout-align="center center" class="item" ng-class="{'editing-item': editing, 'edited': recipe.edited}" ng-repeat="recipe in recipes">
   <label ng-hide="editing" ng-click="editing = true">{{recipe.name}}</label>
   <md-input-container>
-    <label>Recipe:</label>
+    <!--<label>Recipe:</label>-->
     <input ng-show="editing" ng-blur="editing = false" class="editing-label" type="text" ng-model="recipe.name" ng-change="recipe.edited = true"
     />
   </md-input-container>
