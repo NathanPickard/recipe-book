@@ -18,8 +18,11 @@
 
   <div class="list" ng-controller="mainCtrl">
     <div class="add">
-      <a href="#" ng-click="addRecipe()">
+      <md-button class="md-raised md-primary">
+        
+        <a href="#" ng-click="addRecipe()"><md-icon md-svg-icon="home" aria-label="Add recipe"></md-icon>
         + Add a New Recipe</a>
+      </md-button>
     </div>
     <recipe></recipe>
   </div>

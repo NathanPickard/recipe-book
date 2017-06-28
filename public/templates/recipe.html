@@ -3,7 +3,12 @@
   <md-input-container>
     <!--<label>Recipe:</label>-->
     <input ng-show="editing" ng-blur="editing = false" class="editing-label" type="text" ng-model="recipe.name" ng-change="recipe.edited = true"
-    />
+    />    
+  </md-input-container>
+  <md-input-container>
+    <!--<label>Recipe:</label>-->
+    <textarea ng-show="editing" ng-blur="editing = false" class="editing-label" type="text" ng-model="recipe.ingredients" ng-change="recipe.edited = true"
+    />    
   </md-input-container>
   <div class="actions">
     <a href="" ng-click="saveRecipes()">Save</a>
