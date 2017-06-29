@@ -8773,6 +8773,8 @@ angular.module('module', []);
   function config($mdThemingProvider, $mdIconProvider) {
 
     $mdIconProvider.icon('home', '../svg/1-home.svg', 24);
+    $mdIconProvider.icon('plate', '../svg/plate.svg', 24);
+
 
     // var paletteMap = $mdThemingProvider.extendPalette('amber', {
     //   'contrastDefaultColor': 'dark',
