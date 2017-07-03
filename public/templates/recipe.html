@@ -11,11 +11,26 @@
       />
     </md-input-container>
   </md-content>
+
   <md-input-container>
     <label>Recipe:</label>
     <textarea ng-show="editing" ng-blur="editing = false" class="editing-label" type="text" ng-model="recipe.ingredients" ng-change="recipe.edited = true"
     />
   </md-input-container>
+
+  <md-input-container>
+    <label>Ingredients:</label>
+    <textarea ng-show="editing" ng-blur="editing = false" class="editing-label" type="text" ng-model="recipe.ingredients" ng-change="recipe.edited = true"
+    />
+  </md-input-container>
+
+  <md-input-container>
+    <label>Preparation:</label>
+    <textarea ng-show="editing" ng-blur="editing = false" class="editing-label" type="text" ng-model="recipe.ingredients" ng-change="recipe.edited = true"
+    />
+  </md-input-container>
+
+
   <div class="actions">
     <md-button class="md-raised md-primary">
       <a href="" ng-click="saveRecipes()">Save</a>
