@@ -5,11 +5,50 @@
     <md-icon md-svg-icon="plate" aria-label="recipe"></md-icon>{{recipe.name}}
     </label>
 
-    <md-input-container>
-      <label>Recipe name:</label>
-      <input ng-show="editing" ng-blur="editing = false" class="editing-label" type="text" ng-model="recipe.name" ng-change="recipe.edited = true"
-      />
-    </md-input-container>
+  <md-card md-theme="{{ showDarkTheme ? 'dark-blue' : 'default' }}" md-theme-watch>
+    <md-card-title>
+      <md-card-title-text>
+        <md-input-container>
+          <label>Recipe name:</label>
+          <input ng-show="editing" ng-blur="editing = false" class="editing-label" type="text" ng-model="recipe.name" ng-change="recipe.edited = true"
+          />
+        </md-input-container>
+
+        <md-input-container>
+          <label>Ingredients:</label>
+          <textarea ng-show="editing" ng-blur="editing = false" class="editing-label" type="text" ng-model="recipe.ingredients" ng-change="recipe.edited = true"
+          />
+        </md-input-container>
+
+        <md-input-container>
+          <label>Directions:</label>
+          <textarea ng-show="editing" ng-blur="editing = false" class="editing-label" type="text" ng-model="recipe.directions" ng-change="recipe.edited = true"
+          />
+        </md-input-container>
+
+      </md-card-title-text>
+      <md-card-title-media>
+        <div class="md-media-md card-media"></div>
+      </md-card-title-media>
+
+    </md-card-title>
+    <md-card-actions layout="row" layout-align="end center">
+      <md-button class="md-raised md-primary">
+      <a href="" ng-click="saveRecipes()">Save</a>
+    </md-button>
+      <md-button class="md-raised md-primary">
+      <!--<a href="" class="delete" ng-click="showConfirm(recipe, $index, $event)">Delete</a>-->
+      <a href="" class="delete" ng-click="deleteRecipe(recipe, $index)">Delete</a>
+    </md-button>
+    </md-card-actions>
+  </md-card>
+
+
+  <md-input-container>
+    <label>Recipe name:</label>
+    <input ng-show="editing" ng-blur="editing = false" class="editing-label" type="text" ng-model="recipe.name" ng-change="recipe.edited = true"
+    />
+  </md-input-container>
 
   <md-input-container>
     <label>Ingredients:</label>
@@ -29,7 +68,8 @@
       <a href="" ng-click="saveRecipes()">Save</a>
     </md-button>
     <md-button class="md-raised md-primary">
-      <a href="" class="delete" ng-click="showConfirm($event)">Delete</a>
+      <!--<a href="" class="delete" ng-click="showConfirm(recipe, $index, $event)">Delete</a>-->
+      <a href="" class="delete" ng-click="deleteRecipe(recipe, $index)">Delete</a>
     </md-button>
   </div>
 

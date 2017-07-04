@@ -11213,26 +11213,26 @@ module.exports = MainCtrl;
 "use strict";
 
 
-function RecipeCtrl($scope, dataService, $mdDialog) {
+function RecipeCtrl($scope, dataService, $mdDialog, $mdToast) {
 
-  $scope.showConfirm = function (ev) {
-    var confirm = $mdDialog.confirm()
-      .title('Are you sure you want to delete this recipe?')
-      .textContent('This will delete the recipe')
-      .ariaLabel('Confirm the recipe deletion')
-      .targetEvent(ev)
-      .ok('Yes, delete')
-      .cancel('Do not delete');
 
-    $mdDialog.show(confirm).then(function(){
+  // $scope.showConfirm = function (recipe, index, event) {
+  //   var confirm = $mdDialog.confirm()
+  //     .title('Are you sure you want to delete this recipe?')
+  //     .textContent('This will delete the recipe')
+  //     .ariaLabel('Confirm the recipe deletion')
+  //     .targetEvent(event)
+  //     .ok('Yes, delete')
+  //     .cancel('Do not delete');
 
-      $scope.deleteRecipe = function (recipe, index) {
-        $scope.recipes.splice(index, 1);
-        dataService.deleteRecipe(recipe);
-      }, function () {
-      };
-    });
-  };
+  //   $mdDialog.show(confirm).then(function() {
+
+  $scope.deleteRecipe = function (recipe, index) {
+    $scope.recipes.splice(index, 1);
+    dataService.deleteRecipe(recipe);
+  }
+  //   });
+  // };
 
 
   $scope.saveRecipes = function () {
