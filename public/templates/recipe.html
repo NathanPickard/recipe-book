@@ -4,19 +4,12 @@
   <label ng-hide="editing" ng-click="editing = true">
     <md-icon md-svg-icon="plate" aria-label="recipe"></md-icon>{{recipe.name}}
     </label>
-  <md-content>
+
     <md-input-container>
       <label>Recipe name:</label>
       <input ng-show="editing" ng-blur="editing = false" class="editing-label" type="text" ng-model="recipe.name" ng-change="recipe.edited = true"
       />
     </md-input-container>
-  </md-content>
-
-  <md-input-container>
-    <label>Recipe:</label>
-    <textarea ng-show="editing" ng-blur="editing = false" class="editing-label" type="text" ng-model="recipe.ingredients" ng-change="recipe.edited = true"
-    />
-  </md-input-container>
 
   <md-input-container>
     <label>Ingredients:</label>
@@ -25,8 +18,8 @@
   </md-input-container>
 
   <md-input-container>
-    <label>Preparation:</label>
-    <textarea ng-show="editing" ng-blur="editing = false" class="editing-label" type="text" ng-model="recipe.ingredients" ng-change="recipe.edited = true"
+    <label>Directions:</label>
+    <textarea ng-show="editing" ng-blur="editing = false" class="editing-label" type="text" ng-model="recipe.directions" ng-change="recipe.edited = true"
     />
   </md-input-container>
 
@@ -36,7 +29,7 @@
       <a href="" ng-click="saveRecipes()">Save</a>
     </md-button>
     <md-button class="md-raised md-primary">
-      <a href="" class="delete" ng-click="deleteRecipe(recipe, $index)">Delete</a>
+      <a href="" class="delete" ng-click="showConfirm($event)">Delete</a>
     </md-button>
   </div>
 

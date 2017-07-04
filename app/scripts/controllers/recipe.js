@@ -1,11 +1,26 @@
 'use strict';
 
-function RecipeCtrl($scope, dataService) {
+function RecipeCtrl($scope, dataService, $mdDialog) {
 
-  $scope.deleteRecipe = function (recipe, index) {
-    $scope.recipes.splice(index, 1);
-    dataService.deleteRecipe(recipe);
+  $scope.showConfirm = function (ev) {
+    var confirm = $mdDialog.confirm()
+      .title('Are you sure you want to delete this recipe?')
+      .textContent('This will delete the recipe')
+      .ariaLabel('Confirm the recipe deletion')
+      .targetEvent(ev)
+      .ok('Yes, delete')
+      .cancel('Do not delete');
+
+    $mdDialog.show(confirm).then(function(){
+
+      $scope.deleteRecipe = function (recipe, index) {
+        $scope.recipes.splice(index, 1);
+        dataService.deleteRecipe(recipe);
+      }, function () {
+      };
+    });
   };
+
 
   $scope.saveRecipes = function () {
     var filteredRecipes = $scope.recipes.filter(function (recipe) {
@@ -18,7 +33,7 @@ function RecipeCtrl($scope, dataService) {
   };
 
   $scope.resetRecipeState = function () {
-    $scope.recipes.forEach(function(recipe) {
+    $scope.recipes.forEach(function (recipe) {
       recipe.edited = false;
     });
   }
