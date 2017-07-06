@@ -34,6 +34,21 @@
         .accentPalette('yellow');
   }
 
+  function config($stateProvider, $urlRouterProvider) {
+    $urlRouterProvider.otherwise("/");
+
+    $stateProvider
+      .state('home', {
+        url: '/',
+        views: {
+          '@': {
+            templateUrl: 'home.html',
+            controller: ''
+          }
+        }
+      })
+  }
+
 
 
   // angular.module('module', ['ui.router'])

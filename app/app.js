@@ -14,7 +14,12 @@ var angular = require('angular');
 
 // var ngMaterial = require('angular-material');
 
-angular.module("recipeBookApp", ['ngMaterial', 'module']);
+angular.module("recipeBookApp", [
+  'ngMaterial',
+  'ngAnimate',
+  'ngAria',
+  'module',
+  'ui.router']);
 
 require('./scripts/services');
 require('./scripts/directives');
