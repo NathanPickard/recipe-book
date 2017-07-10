@@ -34,20 +34,20 @@
         .accentPalette('yellow');
   }
 
-  function config($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise("/");
+  // function config($stateProvider, $urlRouterProvider) {
+  //   $urlRouterProvider.otherwise("/");
 
-    $stateProvider
-      .state('home', {
-        url: '/',
-        views: {
-          '@': {
-            templateUrl: 'home.html',
-            controller: ''
-          }
-        }
-      })
-  }
+  //   $stateProvider
+  //     .state('home', {
+  //       url: '/',
+  //       views: {
+  //         '@': {
+  //           templateUrl: 'home.html',
+  //           controller: ''
+  //         }
+  //       }
+  //     })
+  // }
 
 
 

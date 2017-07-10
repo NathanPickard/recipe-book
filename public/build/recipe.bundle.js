@@ -8737,7 +8737,12 @@ var angular = __webpack_require__(7);
 
 // var ngMaterial = require('angular-material');
 
-angular.module("recipeBookApp", ['ngMaterial', 'module']);
+angular.module("recipeBookApp", [
+  'ngMaterial',
+  'ngAnimate',
+  'ngAria',
+  'module',
+  'ui.router']);
 
 __webpack_require__(91);
 __webpack_require__(93);
@@ -8798,6 +8803,21 @@ angular.module('module', []);
         .primaryPalette('green')
         .accentPalette('yellow');
   }
+
+  // function config($stateProvider, $urlRouterProvider) {
+  //   $urlRouterProvider.otherwise("/");
+
+  //   $stateProvider
+  //     .state('home', {
+  //       url: '/',
+  //       views: {
+  //         '@': {
+  //           templateUrl: 'home.html',
+  //           controller: ''
+  //         }
+  //       }
+  //     })
+  // }
 
 
 
