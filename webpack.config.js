@@ -27,6 +27,12 @@ module.exports = {
       }
     ]
   },
+  devServer: {
+    port: 9000,
+    compress: true,
+    stats: "errors-only",
+    open: true
+  },
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({ name: 'vendor', filename: 'vendor.bundle.js' })
   ]
