@@ -15,6 +15,13 @@ module.exports = {
     path: __dirname + '/public/build',
     filename: 'recipe.bundle.js'
   },
+  devServer: {
+    // contentBase: path.join(__dirname, '/public/build'),
+    // // compress: true,
+    // // stats: "errors-only",
+    open: true,
+    port: 3000
+  },
   module: {
     loaders: [
       {
@@ -27,12 +34,7 @@ module.exports = {
       }
     ]
   },
-  devServer: {
-    port: 9000,
-    compress: true,
-    stats: "errors-only",
-    open: true
-  },
+  
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({ name: 'vendor', filename: 'vendor.bundle.js' })
   ]
