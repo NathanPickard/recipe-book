@@ -15,13 +15,13 @@ module.exports = {
     path: __dirname + '/public/build',
     filename: 'recipe.bundle.js'
   },
-  devServer: {
-    // contentBase: path.join(__dirname, '/public/build'),
-    // // compress: true,
-    // // stats: "errors-only",
-    open: true,
-    port: 3000
-  },
+  // devServer: {
+  //   // contentBase: path.join(__dirname, '/public/build'),
+  //   // // compress: true,
+  //   // // stats: "errors-only",
+  //   open: true,
+  //   port: 3000
+  // },
   module: {
     loaders: [
       {

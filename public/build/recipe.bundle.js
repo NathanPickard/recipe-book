@@ -8730,10 +8730,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-
+// import routing from './scripts/module/config';
 
 var angular = __webpack_require__(7);
-
 
 // var ngMaterial = require('angular-material');
 
@@ -8771,8 +8770,16 @@ angular.module('module', []);
 (function () {
   'use strict';
 
-  angular.module('module')
+  angular.module('module', [])
     .config(config);
+    
+
+    // routing.$inject = ['$urlRouterProvider', '$locationProvider'];
+
+    // export default function routing($urlRouterProvider, $locationProvider) {
+    //   $locationProvider.html5Mode(true);
+    //   $urlRouterProvider.otherwise('/');
+    // }
 
   /*@ngInject*/
   function config($mdThemingProvider, $mdIconProvider) {
@@ -8786,18 +8793,6 @@ angular.module('module', []);
     //   'contrastDarkColors': ['50'],
     //   '50': 'ffffff'
     // });
-
-    // $mdThemingProvider.definePalette('customPalette', paletteMap);
-
-    // $mdThemingProvider.theme('default')
-    // .primaryPalette('customPalette', {
-    //   'default': '500',
-    //   'hue-1': '50'
-    // })
-    // .accentPalette('pink');
-
-    // $mdThemingProvider.theme('input', 'default')
-    // .primaryPalette('grey');
 
     $mdThemingProvider.theme('default')
         .primaryPalette('green')
@@ -8818,8 +8813,6 @@ angular.module('module', []);
   //       }
   //     })
   // }
-
-
 
   // angular.module('module', ['ui.router'])
   //   .config(['$stateProvider', '$urlRouterProvider', '$logProvider',

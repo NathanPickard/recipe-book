@@ -6,11 +6,10 @@
 
 import './scripts/module/index';
 import './scripts/module/config';
-
 import uirouter from 'angular-ui-router';
+// import routing from './scripts/module/config';
 
 var angular = require('angular');
-
 
 // var ngMaterial = require('angular-material');
 
