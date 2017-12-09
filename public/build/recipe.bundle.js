@@ -8796,7 +8796,7 @@ angular.module('module', []);
 
     $mdThemingProvider.theme('default')
         .primaryPalette('green')
-        .accentPalette('yellow');
+        .accentPalette('blue');
   }
 
   // function config($stateProvider, $urlRouterProvider) {
@@ -11203,13 +11203,13 @@ angular.module('recipeBookApp').controller('recipeCtrl', __webpack_require__(97)
 
 
 function MainCtrl($scope, $log, $interval, dataService) {
-  
+
   dataService.getRecipes(function (res) {
     var recipes = res.data.recipes;
     $scope.recipes = recipes;
   });
 
-  $scope.addRecipe = function() {
+  $scope.addRecipe = function () {
     $scope.recipes.unshift({
       name: "This is a new recipe.",
       completed: false

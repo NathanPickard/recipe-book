@@ -27,7 +27,7 @@
 
     $mdThemingProvider.theme('default')
         .primaryPalette('green')
-        .accentPalette('yellow');
+        .accentPalette('blue');
   }
 
   // function config($stateProvider, $urlRouterProvider) {
