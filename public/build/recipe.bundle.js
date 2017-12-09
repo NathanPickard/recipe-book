@@ -11243,6 +11243,12 @@ function RecipeCtrl($scope, dataService, $mdDialog, $mdToast) {
   $scope.deleteRecipe = function (recipe, index) {
     $scope.recipes.splice(index, 1);
     dataService.deleteRecipe(recipe);
+    $mdToast.show(
+      $mdToast.simple()
+      .textContent('The awesome recipe has been deleted!!')
+      .hideDelay(3000)
+      .position('top right')
+    )
   }
   //   });
   // };

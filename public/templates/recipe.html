@@ -1,9 +1,12 @@
-<div layout="column" id="recipediv" class="item" ng-class="{'editing-item': editing, 'edited': recipe.edited}"
-  ng-repeat="recipe in recipes">
+<div layout="column" id="recipediv" class="item" ng-class="{'editing-item': editing, 'edited': recipe.edited}" ng-repeat="recipe in recipes">
 
-  <label ng-hide="editing" ng-click="editing = true">
-    <md-icon style="padding-right: 10px;" md-svg-icon="plate" aria-label="recipe"></md-icon>{{recipe.name}}
-    </label>
+  <md-card>
+    <md-card-content ng-hide="editing" ng-click="editing = true">
+      <label>
+        <md-icon style="padding-right: 10px;" md-svg-icon="plate" aria-label="recipe"></md-icon>{{recipe.name}}
+      </label>
+    </md-card-content>
+  </md-card>
 
   <md-card ng-show="editing" ng-blur="editing = false" md-theme="{{ showDarkTheme ? 'dark-blue' : 'default' }}" md-theme-watch>
     <md-card-title>
@@ -32,20 +35,21 @@
           />
         </md-input-container>
       </md-card-title-text>
-      
+
       <md-card-title-media>
         <div class="md-media-md card-media"></div>
       </md-card-title-media>
 
     </md-card-title>
+
     <md-card-actions layout="row" layout-align="end center">
       <md-button class="md-raised md-primary">
-      <a href="" ng-click="saveRecipes()">Save</a>
-    </md-button>
+        <a style="text-decoration: none;" href="" ng-click="saveRecipes()">Save</a>
+      </md-button>
       <md-button class="md-raised md-primary">
-      <!--<a href="" class="delete" ng-click="showConfirm(recipe, $index, $event)">Delete</a>-->
-      <a href="" class="delete" ng-click="deleteRecipe(recipe, $index)">Delete</a>
-    </md-button>
+        <!--<a href="" class="delete" ng-click="showConfirm(recipe, $index, $event)">Delete</a>-->
+        <a style="text-decoration: none;" href="" class="delete" ng-click="deleteRecipe(recipe, $index)">Delete</a>
+      </md-button>
     </md-card-actions>
   </md-card>
 
@@ -75,7 +79,7 @@
     </md-button>
     <md-button class="md-raised md-primary">
       <!--<a href="" class="delete" ng-click="showConfirm(recipe, $index, $event)">Delete</a>-->
-      <!--<a href="" class="delete" ng-click="deleteRecipe(recipe, $index)">Delete</a>
+  <!--<a href="" class="delete" ng-click="deleteRecipe(recipe, $index)">Delete</a>
     </md-button>
   </div>-->
 

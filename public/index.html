@@ -6,12 +6,13 @@
   <title>Recipe Book</title>
   <!--<link rel="stylesheet" href="node_modules/angular-material/angular-material.min.css">-->
   <link rel="stylesheet" href="styles/main.css" type="text/css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
 </head>
 
 <body ng-app="recipeBookApp">
   <ng-include src="'templates/navbar.html'"></ng-include>
 
-  <h1>My Recipes!</h1>
+  <h1 style="display: flex; justify-content: center;">My Recipes!</h1>
 
   <md-divider></md-divider>
 
@@ -20,10 +21,10 @@
   <div class="list" ng-controller="mainCtrl">
     <div class="add">
       <md-button class="md-raised md-primary">
-        
-        <a href="#" ng-click="addRecipe()"><md-icon md-svg-icon="plate" aria-label="Add recipe"></md-icon>
-        + Add a New Recipe</a>
-       </md-button> 
+        <a style="text-decoration: none; margin-right: 5px;" href="#" ng-click="addRecipe()">
+          + Add a New Recipe</a>
+        <md-icon md-svg-icon="plate" aria-label="Add recipe"></md-icon>
+      </md-button>
     </div>
     <recipe></recipe>
   </div>
