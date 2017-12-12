@@ -1,5 +1,6 @@
 {
-  "connectionString": "mongodb://localhost:27017/recipeApp",
+  // "connectionString": "mongodb://localhost:27017/recipeApp",
+  "connectionString": "mongodb://heroku_hkf9sswk:du1fjgqf4a6pq2njtom5orndv5@ds135876.mlab.com:35876/heroku_hkf9sswk",
   "apiUrl": "http://localhost:3000/api",
   "secret": "VERY SECRET STRING"
 }
