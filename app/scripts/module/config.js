@@ -45,20 +45,19 @@
   //     })
   // }
 
-  // angular.module('module', ['ui.router'])
-  //   .config(['$stateProvider', '$urlRouterProvider', '$logProvider',
-  //     function config($stateProvider, $urlRouterProvider) {
+  angular.module('module', ['ui.router'])
+    .config(['$stateProvider', '$urlRouterProvider', '$logProvider',
+      function config($stateProvider, $urlRouterProvider) {
 
-  //       $urlRouterProvider.otherwise("/");
-
-  //       $stateProvider
-  //         .state('home', {
-  //           url: '/',
-  //           views: {
-  //             '@': {
-  //               templateUrl: 'templates/home.html'
-  //             }
-  //           }
-  //         })
-  //     }])
+        $urlRouterProvider.otherwise("/");
+        $stateProvider
+          .state('home', {
+            url: '/',
+            views: {
+              '@': {
+                templateUrl: 'templates/home.html'
+              }
+            }
+          })
+      }])
 })();
