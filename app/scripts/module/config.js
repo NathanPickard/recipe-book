@@ -5,7 +5,7 @@
     .config(config);
     
 
-    // routing.$inject = ['$urlRouterProvider', '$locationProvider'];
+    routing.$inject = ['$urlRouterProvider', '$locationProvider'];
 
     // export default function routing($urlRouterProvider, $locationProvider) {
     //   $locationProvider.html5Mode(true);
