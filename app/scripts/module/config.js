@@ -30,20 +30,20 @@
         .accentPalette('blue');
   }
 
-  // function config($stateProvider, $urlRouterProvider) {
-  //   $urlRouterProvider.otherwise("/");
+  function config($stateProvider, $urlRouterProvider) {
+    $urlRouterProvider.otherwise("/");
 
-  //   $stateProvider
-  //     .state('home', {
-  //       url: '/',
-  //       views: {
-  //         '@': {
-  //           templateUrl: 'home.html',
-  //           controller: ''
-  //         }
-  //       }
-  //     })
-  // }
+    $stateProvider
+      .state('home', {
+        url: '/',
+        views: {
+          '@': {
+            templateUrl: 'home.html',
+            controller: ''
+          }
+        }
+      })
+  }
 
   angular.module('module', ['ui.router'])
     .config(['$stateProvider', '$urlRouterProvider', '$logProvider',
