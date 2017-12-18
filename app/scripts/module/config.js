@@ -36,12 +36,9 @@
     $stateProvider
       .state('home', {
         url: '/',
-        views: {
-          '@': {
             templateUrl: 'home.html',
-            controller: ''
-          }
-        }
+            controller: '',
+            controllerAs: 'vm'
       })
   }
 
@@ -53,11 +50,9 @@
         $stateProvider
           .state('home', {
             url: '/',
-            views: {
-              '@': {
-                templateUrl: 'templates/home.html'
-              }
-            }
+                templateUrl: 'templates/home.html',
+                controller: '',
+                controllerAs: 'vm'
           })
       }])
 })();
