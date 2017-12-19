@@ -42,6 +42,18 @@
       })
   }
 
+  //JWT authorization
+  function run($http, $rootScope, $window) {
+    $http.defaults.headers.common['Authorization'] = 'Bearer ' + $window.jwtToken;
+
+    
+    $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
+        $rootScope.activeTab = toState.data.activeTab;
+    });
+}
+
+
+
   angular.module('module', ['ui.router'])
     .config(['$stateProvider', '$urlRouterProvider', '$logProvider',
       function config($stateProvider, $urlRouterProvider) {
