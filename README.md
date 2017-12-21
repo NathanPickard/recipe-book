@@ -1,4 +1,4 @@
-# My Recipes, a Single-Page Applicaion
+# My Recipes, a Single-Page Application
 
 ## About
 This is a Single-Page Application that allows a user to 
