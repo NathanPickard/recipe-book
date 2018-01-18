@@ -5,7 +5,7 @@
     .config(config);
     
 
-    routing.$inject = ['$urlRouterProvider', '$locationProvider'];
+    // routing.$inject = ['$urlRouterProvider', '$locationProvider'];
 
     // export default function routing($urlRouterProvider, $locationProvider) {
     //   $locationProvider.html5Mode(true);
@@ -30,17 +30,17 @@
         .accentPalette('blue');
   }
 
-  function config($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise("/");
+  // function config($stateProvider, $urlRouterProvider) {
+  //   $urlRouterProvider.otherwise("/");
 
-    $stateProvider
-      .state('home', {
-        url: '/',
-            templateUrl: 'home.html',
-            controller: '',
-            controllerAs: 'vm'
-      })
-  }
+  //   $stateProvider
+  //     .state('home', {
+  //       url: '/',
+  //           templateUrl: 'home.html',
+  //           controller: '',
+  //           controllerAs: 'vm'
+  //     })
+  // }
 
   //JWT authorization
   function run($http, $rootScope, $window) {
@@ -53,18 +53,17 @@
 }
 
 
+  // angular.module('module', ['ui.router'])
+  //   .config(['$stateProvider', '$urlRouterProvider', '$logProvider',
+  //     function config($stateProvider, $urlRouterProvider) {
 
-  angular.module('module', ['ui.router'])
-    .config(['$stateProvider', '$urlRouterProvider', '$logProvider',
-      function config($stateProvider, $urlRouterProvider) {
-
-        $urlRouterProvider.otherwise("/");
-        $stateProvider
-          .state('home', {
-            url: '/',
-                templateUrl: 'templates/home.html',
-                controller: '',
-                controllerAs: 'vm'
-          })
-      }])
+  //       $urlRouterProvider.otherwise("/");
+  //       $stateProvider
+  //         .state('home', {
+  //           url: '/',
+  //               templateUrl: 'templates/home.html',
+  //               controller: '',
+  //               controllerAs: 'vm'
+  //         })
+  //     }])
 })();

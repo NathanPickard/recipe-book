@@ -12,7 +12,7 @@ require('./seed');
 
 app.use('/', express.static('public'));
 app.use(parser.json());
-app.use(session({ secret: config.secret, resave: false, saveUninitialized: true }));
+// app.use(session({ secret: config.secret, resave: false, saveUninitialized: true }));
 
 app.use('/api', router);
 

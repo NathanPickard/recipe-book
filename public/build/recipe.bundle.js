@@ -8805,29 +8805,34 @@ angular.module('module', []);
   //   $stateProvider
   //     .state('home', {
   //       url: '/',
-  //       views: {
-  //         '@': {
   //           templateUrl: 'home.html',
-  //           controller: ''
-  //         }
-  //       }
+  //           controller: '',
+  //           controllerAs: 'vm'
   //     })
   // }
+
+  //JWT authorization
+  function run($http, $rootScope, $window) {
+    $http.defaults.headers.common['Authorization'] = 'Bearer ' + $window.jwtToken;
+
+    
+    $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
+        $rootScope.activeTab = toState.data.activeTab;
+    });
+}
+
 
   // angular.module('module', ['ui.router'])
   //   .config(['$stateProvider', '$urlRouterProvider', '$logProvider',
   //     function config($stateProvider, $urlRouterProvider) {
 
   //       $urlRouterProvider.otherwise("/");
-
   //       $stateProvider
   //         .state('home', {
   //           url: '/',
-  //           views: {
-  //             '@': {
-  //               templateUrl: 'templates/home.html'
-  //             }
-  //           }
+  //               templateUrl: 'templates/home.html',
+  //               controller: '',
+  //               controllerAs: 'vm'
   //         })
   //     }])
 })();
