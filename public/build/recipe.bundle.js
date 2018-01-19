@@ -8770,8 +8770,9 @@ angular.module('module', []);
 (function () {
   'use strict';
 
-  angular.module('module', [])
-    .config(config);
+  angular.module('module', ['ui.router'])
+    .config(config)
+    .run(run);
     
 
     // routing.$inject = ['$urlRouterProvider', '$locationProvider'];
@@ -8782,7 +8783,7 @@ angular.module('module', []);
     // }
 
   /*@ngInject*/
-  function config($mdThemingProvider, $mdIconProvider) {
+  function config($mdThemingProvider, $mdIconProvider, $stateProvider, $urlRouterProvider) {
 
     $mdIconProvider.icon('home', '../svg/1-home.svg', 24);
     $mdIconProvider.icon('plate', '../svg/plate.svg', 24);
@@ -8797,6 +8798,14 @@ angular.module('module', []);
     $mdThemingProvider.theme('default')
         .primaryPalette('green')
         .accentPalette('blue');
+
+    // $urlRouterProvider.otherwise("/");
+
+    // $stateProvider
+    //   .state('home', {
+    //     url: '/',
+    //     templateUrl: ''
+    //   })
   }
 
   // function config($stateProvider, $urlRouterProvider) {

@@ -39,6 +39,7 @@ router.put('/recipes/:id', function (req, res) {
   });
 });
 
+
 router.delete('/recipes/:id', function(req, res) {
   var id = req.params.id;
   Recipe.findByIdAndRemove(id, function(err, result) {
