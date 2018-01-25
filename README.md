@@ -2,14 +2,16 @@
 
 ## About
 This is a Single-Page Application that allows a user to 
-add, edit, and save their own recipes to the cloud!  Angular
-Material.  MongoDB is used to store a users recipes.  Angular Material is used as the UI framework.  This application is deployed to Heroku.  The live application can be
-found [here](https://intense-hollows-82524.herokuapp.com/).
+add, edit, save, delete their own recipes to the cloud!  Being a food and BBQ enthusiast, coupled with my love for tech, developing a web application that allows the user to create and store their own recipes made perfect sense.  I built the entire application from scratch using the tech listed below.  The live application can be found [here](https://intense-hollows-82524.herokuapp.com/).
 
 
 ## Built with
-* [AngularJS](https://angularjs.org/) - AngularJS v1.6.4
-* [AngularJS Material](https://material.angularjs.org/latest/) - AngularJS Material v1.1.4
+* [AngularJS](https://angularjs.org/) (v1.6.4)
+* [AngularJS Material](https://material.angularjs.org/latest/) (v1.1.4) - The Angular Material framework is used to implement UI features.
+* [MongoDB](https://www.mongodb.com/) - MongoDB is used to store a user's recipes.
 
-## Currently Under Construction
+## Deployed with
+* This application is deployed to Heroku and the cloud database is managed with [mLab](https://mlab.com/)
+
+## Currently under construction
 * User registration and login
