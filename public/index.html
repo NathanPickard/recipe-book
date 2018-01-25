@@ -25,12 +25,21 @@
           + Add a New Recipe</a>
         <md-icon md-svg-icon="plate" aria-label="Add recipe"></md-icon>
       </md-button>
+
+
+      <input type="text" ng-model="searchText" placeholder="Search your great recipes" />
+
+
+      <div ng-repeat="recipe in recipes | filter:searchText">
+        <recipe></recipe>
+      </div>
+
+      <!-- <recipe></recipe> -->
     </div>
-    <recipe></recipe>
   </div>
 
   <md-subheader>
-      <a href="https://github.com/NathanPickard" target="_blank" style="text-decoration: none; margin: auto;">Nathan Pickard</a> &copy 2018
+    <a href="https://github.com/NathanPickard" target="_blank" style="text-decoration: none; margin: auto;">Nathan Pickard</a> &copy 2018
   </md-subheader>
 
   <script src="./build/vendor.bundle.js"></script>

@@ -2,7 +2,9 @@
 
 ## About
 This is a Single-Page Application that allows a user to 
-add, edit, save, delete their own recipes to the cloud!  Being a food and BBQ enthusiast, coupled with my love for tech, developing a web application that allows the user to create and store their own recipes made perfect sense.  I built the entire application from scratch using the tech listed below.  The live application can be found [here](https://intense-hollows-82524.herokuapp.com/).
+add, edit, save, delete their own recipes to the cloud!  Being a food and BBQ enthusiast, coupled with my love for tech, developing a web application that allows the user to create and store their own recipes made perfect sense.  I built the entire application from scratch using the tech listed below.
+
+The live application can be found [here](https://intense-hollows-82524.herokuapp.com/).
 
 
 ## Built with

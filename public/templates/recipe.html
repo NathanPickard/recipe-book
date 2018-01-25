@@ -1,4 +1,4 @@
-<div layout="column" id="recipediv" class="item" ng-class="{'editing-item': editing, 'edited': recipe.edited}" ng-repeat="recipe in recipes">
+<div layout="column" id="recipediv" class="item" ng-class="{'editing-item': editing, 'edited': recipe.edited}">
 
   <md-card>
     <md-card-content ng-hide="editing" ng-click="editing = true">
@@ -43,7 +43,7 @@
 
     </md-card-title>
 
-    <md-card-actions layout="row" layout-align="end center">
+    <md-card-actions layout="row" layout-align="center">
       <md-button class="md-raised md-primary">
         <a style="text-decoration: none;" href="" ng-click="saveRecipes()">Save</a>
       </md-button>
