@@ -19,16 +19,16 @@
   <div ui-view=""></div>
 
   <div class="list" ng-controller="mainCtrl">
-    <div class="add">
+    <div class="add" style="max-width: 575px; margin: auto;">
       <md-button class="md-raised md-primary">
         <a style="text-decoration: none; margin-right: 5px;" href="#" ng-click="addRecipe()">
           + Add a New Recipe</a>
         <md-icon md-svg-icon="plate" aria-label="Add recipe"></md-icon>
       </md-button>
 
-
-
-      <input type="text" ng-model="searchText" style="width: 250px;" placeholder="Search your recipes" />
+        <md-input-container flex>
+          <input type="text" ng-model="searchText" style="width: 250px;" placeholder="Search your recipes" />
+        </md-input-container>
 
     </div>
 
