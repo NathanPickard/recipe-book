@@ -12,7 +12,10 @@
 <body ng-app="recipeBookApp">
   <ng-include src="'templates/navbar.html'"></ng-include>
 
-  <h1 style="display: flex; justify-content: center;">My Recipes!</h1>
+  <div stlye="display: inline-block;">
+    <h1 style="display: flex; justify-content: center;">My Recipes!</h1>
+    <md-icon md-svg-icon="plate" aria-label="Add recipe"></md-icon>
+  </div>
 
   <md-divider></md-divider>
 
@@ -26,9 +29,9 @@
         <md-icon md-svg-icon="plate" aria-label="Add recipe"></md-icon>
       </md-button>
 
-        <md-input-container flex>
-          <input type="text" ng-model="searchText" style="width: 250px;" placeholder="Search your recipes" />
-        </md-input-container>
+      <md-input-container flex>
+        <input type="text" ng-model="searchText" style="width: 250px;" placeholder="Search your recipes" />
+      </md-input-container>
 
     </div>
 
