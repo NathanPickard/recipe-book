@@ -12,8 +12,8 @@
 <body ng-app="recipeBookApp">
   <ng-include src="'templates/navbar.html'"></ng-include>
 
-  <div>
-    <h1 style="margin-left: 400px;">My Recipes!</h1>
+  <div style="text-align: center">
+    <h1>My Recipes!</h1>
     <md-icon md-svg-icon="plate" aria-label="Add recipe"></md-icon>
   </div>
 
@@ -22,7 +22,7 @@
   <div ui-view=""></div>
 
   <div class="list" ng-controller="mainCtrl">
-    <div class="add" style="max-width: 575px; margin: auto;">
+    <div class="add" style="max-width: 800px; margin: auto;">
       <md-button class="md-raised md-primary">
         <a style="text-decoration: none; margin-right: 5px;" href="#" ng-click="addRecipe()">
           + Add a New Recipe</a>
@@ -33,9 +33,20 @@
         <input type="text" ng-model="searchText" style="width: 250px;" placeholder="Search your recipes" />
       </md-input-container>
 
+
+      <span>Sort by name</span>
+      <select ng-model="orderList">
+        <option value="name">Ascending</option>
+        <option value="-name">Descending</option>
+      </select>
+
+      <!-- <label>Order by</label>
+      <select ng-model="selectedOrder.order" ng-options="order as order.title for order in selectedOrder.orders"></select> -->
+
+
     </div>
 
-    <div ng-repeat="recipe in recipes | filter:searchText">
+    <div ng-repeat="recipe in recipes | filter:searchText | orderBy: orderList">
       <recipe></recipe>
     </div>
 
