@@ -8,7 +8,8 @@
     </md-card-content>
   </md-card>
 
-  <md-card id="recipecard" ng-show="editing" ng-blur="editing = false" md-theme="{{ showDarkTheme ? 'dark-blue' : 'default' }}" md-theme-watch>
+  <md-card id="recipecard" ng-show="editing" ng-blur="editing = false" md-theme="{{ showDarkTheme ? 'dark-blue' : 'default' }}"
+    md-theme-watch>
     <md-card-title>
 
       <md-card-title-text>
@@ -28,6 +29,19 @@
           <label>Ingredients:</label>
           <textarea ng-show="editing" ng-blur="editing = false" class="editing-label" type="text" ng-model="recipe.ingredients" ng-change="recipe.edited = true"
           />
+
+          <md-list class="md-2-line">
+            <md-list-item>{{recipe.ingredients}}</md-list-item>
+          </md-list>
+
+
+          <!-- <md-button class="md-raised md-primary">
+            <a style="text-decoration: none; margin-right: 5px;" href="#" ng-click="addIngredient()">
+              + Add an ingredient</a>
+            <md-icon md-svg-icon="plate" aria-label="Add recipe"></md-icon>
+          </md-button> -->
+
+
         </md-input-container>
 
         <md-input-container>

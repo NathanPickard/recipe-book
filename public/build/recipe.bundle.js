@@ -11230,6 +11230,12 @@ function MainCtrl($scope, $log, $interval, dataService) {
     });
   };
 
+  $scope.addIngredients = function () {
+    $scope.recipe.ingredients.unshift({
+      name: "New ingredient",
+    });
+  };
+
 
   $scope.orderList = "name";
 
