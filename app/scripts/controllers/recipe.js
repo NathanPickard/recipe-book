@@ -24,9 +24,6 @@ function RecipeCtrl($scope, dataService, $mdDialog, $mdToast) {
       .position('top right')
     )
   }
-  //   });
-  // };
-
 
   $scope.saveRecipes = function () {
     var filteredRecipes = $scope.recipes.filter(function (recipe) {
