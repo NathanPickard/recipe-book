@@ -20,7 +20,6 @@ function MainCtrl($scope, $log, $interval, dataService) {
     });
   };
 
-
   $scope.orderList = "name";
 
 }
